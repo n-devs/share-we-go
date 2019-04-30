@@ -1,0 +1,12 @@
+{
+  "name": "share-we-go",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/n-psk/share-we-go.git",
+  "author": "npsk26 <my_nutthapat-26_@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
