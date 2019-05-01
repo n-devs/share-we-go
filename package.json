@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/n-psk/share-we-go.git",
   "author": "npsk26 <my_nutthapat-26_@hotmail.com>",
+  "scripts": {
+    "start": "react-scripts start"
+  },
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
