@@ -34,7 +34,7 @@ class AppBarBottom extends React.Component {
         return (
             <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
-                    <AppBar position="fixed" color="primary" className={classes.appBar}>
+                    <AppBar  position="fixed" color="primary" className={classes.appBar}>
                         <Toolbar>
                             {this.props.children}
                         </Toolbar>
