@@ -1,4 +1,5 @@
 import React from "react";
+import * as firebase from 'firebase'
 
 // Get the Firebase config from the auto generated file.
 const firebaseConfig = require('./firebase-config.json').result;

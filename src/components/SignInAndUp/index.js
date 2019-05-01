@@ -1,3 +1,14 @@
-import AppBarBottom from './forms/AppBarBottom';
+import React from 'react'
 
-export const AppBarBottom;
+class SignInAndUp extends React.Component{
+
+    render() {
+        return (
+            <React.Fragment>
+
+            </React.Fragment>
+        )
+    }
+}
+
+export default SignInAndUp;

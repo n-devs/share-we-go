@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router } from "react-router-dom";
 // Firebase.
 import * as firebase from 'firebase';
-import { RoutePages } from './RoutePages'
+// import { RoutePages } from './RoutePages'
 // firebase ui
 import FirebaseAuth from './Firbase/FirebaseAuth'
 import { AppBarBottom } from './components/SignInAndUp'
@@ -35,7 +35,7 @@ class App extends React.Component {
      * @inheritDoc
      */
     componentDidMount() {
-        this.unregisterAuthObserver = firebaseApp.auth().onAuthStateChanged((user) => {
+         firebaseApp.auth().onAuthStateChanged((user) => {
             this.setState({ isSignedIn: !!user });
         });
     }
@@ -43,9 +43,9 @@ class App extends React.Component {
     /**
      * @inheritDoc
      */
-    componentWillUnmount() {
-        this.unregisterAuthObserver();
-    }
+    // componentWillUnmount() {
+    //     this.unregisterAuthObserver();
+    // }
 
     render() {
         return (
@@ -53,18 +53,18 @@ class App extends React.Component {
                 {this.state.isSignedIn !== undefined && !this.state.isSignedIn &&
                     <div>
                         <AppBarBottom>
-                            <FirebaseAuth className={styles.firebaseUi} uiConfig={this.uiConfig}
+                            <FirebaseAuth uiConfig={this.uiConfig}
                                 firebaseAuth={firebaseApp.auth()} />
                         </AppBarBottom>
                     </div>
                 }
                 {this.state.isSignedIn &&
-                    <div className={styles.signedIn}>
+                    <div >
                         Hello {firebaseApp.auth().currentUser.displayName}. You are now signed In!
-            <a className={styles.button} onClick={() => firebaseApp.auth().signOut()}>Sign-out</a>
+            <a onClick={() => firebaseApp.auth().signOut()}>Sign-out</a>
                     </div>
                 }
-                <RoutePages />
+                {/* <RoutePages /> */}
             </Router>
         )
     }

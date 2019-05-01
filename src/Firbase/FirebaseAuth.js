@@ -80,18 +80,18 @@ export default class FirebaseAuth extends React.Component {
   /**
    * Properties types.
    */
-  props: {
-    // The Firebase UI Web UI Config object.
-    // See: https://github.com/firebase/firebaseui-web#configuration
-    uiConfig: Object,
-    // The Firebase App auth instance to use.
-    firebaseAuth: Object,
-    // Callback that will be passed the FirebaseUi instance before it is
-    // started. This allows access to certain configuration options such as
-    // disableAutoSignIn().
-    uiCallback?: Function,
-    className?: String,
-  };
+  // props: {
+  //   // The Firebase UI Web UI Config object.
+  //   // See: https://github.com/firebase/firebaseui-web#configuration
+  //   uiConfig: Object,
+  //   // The Firebase App auth instance to use.
+  //   firebaseAuth: Object,
+  //   // Callback that will be passed the FirebaseUi instance before it is
+  //   // started. This allows access to certain configuration options such as
+  //   // disableAutoSignIn().
+  //   uiCallback?: Function,
+  //   className?: String,
+  // };
 
   /**
    * @inheritDoc
