@@ -4,11 +4,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import * as firebase from 'firebase';
 // import { RoutePages } from './RoutePages'
 // firebase ui
-import FirebaseAuth from './Firbase/FirebaseAuth'
-import { AppBarBottom } from './components/SignInAndUp'
+import FirebaseAuth from './components/SignInAndUp/FirebaseAuth'
+import AppBarBottom from './components/SignInAndUp/AppBarBottom'
 
 // firebase app connect
 import firebaseApp from './Firbase/firebaseApp'
+
+import BackgrourdFromSingInAndUp from './components/SignInAndUp/BackgrourdFromSingInAndUp'
 
 
 
@@ -35,8 +37,9 @@ class App extends React.Component {
      * @inheritDoc
      */
     componentDidMount() {
-         firebaseApp.auth().onAuthStateChanged((user) => {
-            this.setState({ isSignedIn: !!user });
+
+        firebaseApp.auth().onAuthStateChanged((user) => {
+            this.setState({ isSignedIn: user });
         });
     }
 
@@ -52,9 +55,14 @@ class App extends React.Component {
             <Router>
                 {this.state.isSignedIn !== undefined && !this.state.isSignedIn &&
                     <div>
+                        <BackgrourdFromSingInAndUp >
+                            
+                        </BackgrourdFromSingInAndUp>
                         <AppBarBottom>
                             <FirebaseAuth uiConfig={this.uiConfig}
                                 firebaseAuth={firebaseApp.auth()} />
+
+                            {/* <Facebook /> */}
                         </AppBarBottom>
                     </div>
                 }

@@ -11,6 +11,7 @@ const styles = {
     appBar: {
         top: 'auto',
         bottom: 0,
+        borderRadius: "15px 15px 0px 0px"
     },
 };
 
@@ -18,7 +19,7 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             // light: will be calculated from palette.primary.main,
-            main: '#ff4400',
+            main: '#fbfbfb',
             // dark: will be calculated from palette.primary.main,
             // contrastText: will be calculated to contrast with palette.primary.main
         }
@@ -35,7 +36,7 @@ class AppBarBottom extends React.Component {
             <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
                     <AppBar  position="fixed" color="primary" className={classes.appBar}>
-                        <Toolbar>
+                        <Toolbar style={{display: "block"}}>
                             {this.props.children}
                         </Toolbar>
                     </AppBar>

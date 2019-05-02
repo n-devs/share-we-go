@@ -2,7 +2,7 @@
 .mdl-button {
     background: 0 0;
     border: none;
-    border-radius: 2px;
+    border-radius: 50px;
     color: #000;
     position: relative;
     height: 36px;
@@ -1050,7 +1050,7 @@ dialog.fixed {
 }
 
 .firebaseui-card-content {
-    padding: 0 24px
+    padding: 18px 24px 6px 24px
 }
 
 .firebaseui-card-footer {
